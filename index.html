@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factors Influencing Non-Adoption of Online Payment Systems | Research Study</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f8f9fa;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200') center/cover;
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    header > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .institution {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      opacity: 0.9;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .authors {
+      font-size: 1.1rem;
+      margin-top: 20px;
+      opacity: 0.95;
+    }
+
+    .authors span {
+      display: inline-block;
+      margin: 5px 15px;
+    }
+
+    .advisor {
+      margin-top: 15px;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px;
+    }
+
+    nav li {
+      margin: 5px 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1e3c72;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      background: #1e3c72;
+      color: white;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    section {
+      background: white;
+      padding: 50px;
+      margin-bottom: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #1e3c72;
+      font-size: 2rem;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #2a5298;
+    }
+
+    h3 {
+      color: #2a5298;
+      font-size: 1.5rem;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      text-align: justify;
+      font-size: 1.05rem;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 400px;
+      background: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200') center/cover;
+      border-radius: 12px;
+      margin: 40px 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .objectives-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .objective-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .objective-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .objective-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .significance-list {
+      display: grid;
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .significance-item {
+      padding: 25px;
+      background: #f8f9fa;
+      border-left: 5px solid #2a5298;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .significance-item:hover {
+      background: #e9ecef;
+      transform: translateX(10px);
+    }
+
+    .significance-item strong {
+      color: #1e3c72;
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .concept-paper-preview {
+      background: #f8f9fa;
+      padding: 30px;
+      border-radius: 8px;
+      border: 2px solid #dee2e6;
+      margin: 30px 0;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: #28a745;
+      color: white;
+      padding: 15px 35px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    }
+
+    .download-btn:hover {
+      background: #218838;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+    }
+
+    .references {
+      counter-reset: reference-counter;
+    }
+
+    .reference {
+      counter-increment: reference-counter;
+      margin-bottom: 20px;
+      padding-left: 40px;
+      position: relative;
+      line-height: 1.8;
+    }
+
+    .reference::before {
+      content: "[" counter(reference-counter) "]";
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+      color: #2a5298;
+    }
+
+    .reference a {
+      color: #2a5298;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .reference a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #1e3c72;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .image-card {
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50%;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    }
+
+    .image-caption {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      color: white;
+      font-weight: 600;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      section {
+        padding: 30px 20px;
+      }
+
+      .container {
+        padding: 40px 15px;
+      }
+
+      .authors span {
+        display: block;
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="institution">City of Malabon University | College of Accountancy</div>
+    <h1>Factors Influencing the Non-Adoption of Online Payment Systems Among Sari-Sari Store Owners in Malabon City</h1>
+    <div class="authors">
+      <span>Dalida, Riloiza Fhea</span>
+      <span>Falcunitin, John Carl</span>
+      <span>Moreno, Naomi Mae</span>
+      <span>Orellano, Rochelle C.</span>
+      <span>Velasco, Micah Selah B.</span>
+    </div>
+    <div class="advisor">Research Advisor: Glen DV. De Leon | S.Y. 2025-2026</div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="#background">Background</a></li>
+      <li><a href="#objectives">Objectives</a></li>
+      <li><a href="#significance">Significance</a></li>
+      <li><a href="#concept-paper">Concept Paper</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section id="abstract">
+      <h2>Abstract</h2>
+      <div class="hero-image"></div>
+      <p>The increasing adoption of technology has transformed how numerous businesses manage financial transactions. Online payment platforms, including e-wallets, internet banking, and QR code payments, provide convenience, speed, and security for both businesses and their customers. Despite these advantages and the promotion by government bodies and financial institutions in the Philippines, many sari-sari store owners in Malabon City continue to rely on conventional cash dealings.</p>
+      
+      <p>This research aims to identify and analyze the factors influencing the non-adoption of online payment systems among sari-sari store owners in Malabon City. Through comprehensive investigation, this study explores barriers such as security concerns, insufficient understanding, low customer awareness, technological limitations, digital literacy challenges, budgetary constraints, and trust issues that affect their readiness to implement online payment methods.</p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">2025</span>
+          <span>Research Year</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">5</span>
+          <span>Researchers</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">CMU</span>
+          <span>Institution</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="background">
+      <h2>Background of the Study</h2>
+      
+      <div class="image-grid">
+        <div class="image-card" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800')">
+          <div class="image-caption">Digital Payment Systems</div>
+        </div>
+        <div class="image-card" style="background-image: url('https://images.unsplash.com/photo-1604843750484-9c5830c4c7e5?w=800')">
+          <div class="image-caption">Local Sari-Sari Stores</div>
+        </div>
+      </div>
+
+      <p>The local government of Malabon City has officially partnered with GCash as part of their modernization of financial transactions to allow cashless payments and increase the availability of electronic money services for people and companies. Although these measures have been taken, uneven digital payment technology adoption continues to be a situation with many traditional businesses still sticking to cash-based methods.</p>
+
+      <p>This reluctance stems from various barriers including technical difficulty, inadequate infrastructure, anxiety regarding security, and digital literacy challenges. Numerous studies have analyzed the determinants of electronic payment adoption in sari-sari shops, but most of them are conducted in places such as Davao City, whose tech support and buyer attitude may vary from other localities.</p>
+
+      <h3>Problem Statement</h3>
+      <p>While the availability of cashless payment systems is continually on the rise in the Philippines, many sari-sari store proprietors in Malabon City prefer to transact in cash, mainly due to a lack of trust, limited knowledge, and security and cost concerns. This hesitancy not only constricts business operations' efficiency but also impedes the widespread adoption of cashless payment methods that the local government is promoting.</p>
+
+      <p>Limited research has explored how urban density, diverse customer demographics, and varying levels of digital literacy affect e-payment adoption in small retail businesses in Malabon City. This gap highlights the need for localized studies that examine operational, technological, and transaction-related factors, providing insights that are directly relevant to policymakers, financial institutions, and sari-sari store owners in the city.</p>
+    </section>
+
+    <section id="objectives">
+      <h2>Research Objectives</h2>
+      <div class="objectives-grid">
+        <div class="objective-card">
+          <h4>Primary Objective</h4>
+          <p>Identify the factors influencing the non-adoption of online payment systems among sari-sari store owners in Malabon City</p>
+        </div>
+        <div class="objective-card">
+          <h4>Secondary Objective</h4>
+          <p>Examine perceptions of sari-sari store owners regarding online payment systems and digital transactions</p>
+        </div>
+        <div class="objective-card">
+          <h4>Research Impact</h4>
+          <p>Provide actionable insights for policymakers and financial institutions to improve digital payment adoption</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="significance">
+      <h2>Significance of the Study</h2>
+      <div class="significance-list">
+        <div class="significance-item">
+          <strong>Sari-Sari Store Owners</strong>
+          Helps them understand challenges that come with using online payments in their quest for an easier and safer way of transaction, enabling informed decision-making about digital adoption.
+        </div>
+        <div class="significance-item">
+          <strong>Micro-Entrepreneurs & Local Business Communities</strong>
+          Offers knowledge to help improve business operations and facilitate digital transformation, providing practical insights into overcoming barriers to technology adoption.
+        </div>
+        <div class="significance-item">
+          <strong>Local Government Units (LGUs)</strong>
+          Provides guidelines for programs supporting small businesses and promoting financial inclusion, enabling more targeted and effective policy interventions.
+        </div>
+        <div class="significance-item">
+          <strong>Banks & E-Wallet Service Providers</strong>
+          Highlights consumer concerns to improve their services, interface design, and customer education programs, making digital payment solutions more accessible.
+        </div>
+        <div class="significance-item">
+          <strong>Scholars & Policymakers</strong>
+          Adds knowledge on online payment usage patterns and will inform future projects related to micro-business development and financial technology policy.
+        </div>
+      </div>
+    </section>
+
+    <section id="concept-paper">
+      <h2>Concept Paper Preview</h2>
+      <div class="concept-paper-preview">
+        <h3>Introduction</h3>
+        <p>The increasing adoption of technology has changed how numerous companies manage financial transactions. Online payment platforms, including wallets, internet banking and QR code payments provide convenience, quickness and safety for both businesses and their customers. Due to these advantages government bodies and financial institutions in the Philippines have promoted payment options, for micro and small business operators.</p>
+
+        <p>Nonetheless with these improvements numerous sari-sari shop proprietors still depend on conventional cash dealings. Sari-sari stores continue to be a component of local neighborhoods particularly in urban locations such as Malabon City, where they function as convenient suppliers of everyday essentials. Research indicates that although certain sari-sari stores have started using wallets many store owners continue to encounter obstacles, like security worries, insufficient understanding, low customer awareness and technological limitations which affect their readiness to implement online payment methods.</p>
+
+        <p>Many sari-sari store owners still use cash despite the advantages of online payment systems because of issues such low digital literacy, budgetary limitations, outdated technology, and worries about security and trust. These problems emphasize the necessity of investigating the reasons behind their non-adoption.</p>
+      </div>
+      <a href="#" class="download-btn" onclick="alert('Full concept paper download would be implemented here'); return false;">Download Full Concept Paper (PDF)</a>
+    </section>
+
+    <section id="references">
+      <h2>References</h2>
+      <div class="references">
+        <div class="reference">
+          Impact of Digital Payment Systems on Financial Inclusion and Small Business Growth in Developing Economies. ResearchGate. <a href="https://www.researchgate.net/publication/391883054_Impact_of_Digital_Payment_Systems_on_Financial_Inclusion_and_Small_Business_Growth_in_Developing_Economies" target="_blank">https://www.researchgate.net/publication/391883054</a>
+        </div>
+        <div class="reference">
+          Widayani, A., Fiernaningsih, N., & Herijanto, B. (2023). Factors Affecting the Adoption of Digital Payment Systems. International Journal of Economics, Business and Accounting Research (IJEBAR). <a href="https://jurnal.stie-aas.ac.id/index.php/IJEBAR/article/view/18115" target="_blank">https://jurnal.stie-aas.ac.id/index.php/IJEBAR/article/view/18115</a>
+        </div>
+        <div class="reference">
+          Malabon City Government & GCash. (2024). Malabon City Seals Partnership with GCash for Cashless Payments. Mynt. <a href="https://mynt.com.ph/newsroom/malabon-city-seals-partnership-with-gcash-for-cashless-payments" target="_blank">https://mynt.com.ph/newsroom/malabon-city-seals-partnership-with-gcash-for-cashless-payments</a>
+        </div>
+        <div class="reference">
+          Gesta, J. R., et al. (2025). Factors Influencing Sari-Sari Stores in Adopting Electronic Payments at Barangay Bucana, Davao City: A Descriptive Analysis. International Journal of Research and Innovation in Social Science (IJRISS). <a href="https://rsisinternational.org/journals/ijriss/articles/factors-influencing-sari-sari-stores-in-adopting-electronic-payments-at-barangay-bucana-davao-city-a-descriptive-analysis/" target="_blank">https://rsisinternational.org/journals/ijriss/articles/factors-influencing-sari-sari-stores-in-adopting-electronic-payments-at-barangay-bucana-davao-city-a-descriptive-analysis/</a>
+        </div>
+        <div class="reference">
+          De Guzman, A. B., & Santos, M. L. (2022). Digital Payment Adoption in Philippine Micro-Enterprises. Journal of Innovation in Social and Economic Management (JISEM). <a href="https://jisem-journal.com/index.php/journal/article/view/3208/1387" target="_blank">https://jisem-journal.com/index.php/journal/article/view/3208/1387</a>
+        </div>
+        <div class="reference">
+          Grenawalt, R. (2023). Digital Payments Trends. Vation Ventures Research. <a href="https://www.vationventures.com/research-article/digital-payments-trends" target="_blank">https://www.vationventures.com/research-article/digital-payments-trends</a>
+        </div>
+        <div class="reference">
+          Raza, S. A. (2025). Barriers to Digital Payment Adoption in Traditional Retail: A Systematic Review. Technology and Society Journal.
+        </div>
+        <div class="reference">
+          Trout, L. (2022). Trust and Security in Digital Financial Services: Consumer Perspectives in Emerging Markets. Financial Technology Review.
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div style="background: #fff3cd; color: #856404; padding: 20px; border-radius: 8px; margin-bottom: 30px; border: 2px solid #ffeaa7;">
+      <strong>⚠️ DISCLAIMER</strong>
+      <p style="margin-top: 10px; color: #856404;">This is NOT an official website of City of Malabon University (CMU). This website was created solely for research presentation and educational purposes by the student researchers listed above. We do not intend to impersonate or officially represent City of Malabon University or any of its departments. All content is for academic purposes only.</p>
+    </div>
+    <p>&copy; 2025 City of Malabon University | College of Accountancy</p>
+    <p>Research conducted under the guidance of Glen DV. De Leon</p>
+    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">This website presents academic research on digital payment adoption in Malabon City</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Add animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
